@@ -1,0 +1,11 @@
+C:\Users\user\Workspace\GNB\GNB.Business\bin\Debug\netcoreapp2.1\GNB.Business.deps.json
+C:\Users\user\Workspace\GNB\GNB.Business\bin\Debug\netcoreapp2.1\GNB.Business.runtimeconfig.json
+C:\Users\user\Workspace\GNB\GNB.Business\bin\Debug\netcoreapp2.1\GNB.Business.runtimeconfig.dev.json
+C:\Users\user\Workspace\GNB\GNB.Business\bin\Debug\netcoreapp2.1\GNB.Business.dll
+C:\Users\user\Workspace\GNB\GNB.Business\obj\Debug\netcoreapp2.1\GNB.Business.csprojAssemblyReference.cache
+C:\Users\user\Workspace\GNB\GNB.Business\obj\Debug\netcoreapp2.1\GNB.Business.csproj.CoreCompileInputs.cache
+C:\Users\user\Workspace\GNB\GNB.Business\obj\Debug\netcoreapp2.1\GNB.Business.RazorAssemblyInfo.cache
+C:\Users\user\Workspace\GNB\GNB.Business\obj\Debug\netcoreapp2.1\GNB.Business.RazorAssemblyInfo.cs
+C:\Users\user\Workspace\GNB\GNB.Business\obj\Debug\netcoreapp2.1\GNB.Business.AssemblyInfoInputs.cache
+C:\Users\user\Workspace\GNB\GNB.Business\obj\Debug\netcoreapp2.1\GNB.Business.AssemblyInfo.cs
+C:\Users\user\Workspace\GNB\GNB.Business\obj\Debug\netcoreapp2.1\GNB.Business.RazorTargetAssemblyInfo.cache
