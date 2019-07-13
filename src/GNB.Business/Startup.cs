@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using GNB.Business.Interfaces;
+using GNB.Business.Services;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Cors.Internal;
@@ -49,8 +51,12 @@ namespace GNB.Business
             });
 
             services.AddSingleton<IConfiguration>(Configuration);
-            //services.AddScoped<IMenuService, MenuFileService>();
             services.AddMemoryCache();
+
+            //Dependecy Injection
+            services.AddScoped<IRatesService, RatesJSONService>();
+            services.AddScoped<ITransactionsService, TransactionsJSONService>();
+            
 
             // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen(c =>
@@ -81,7 +87,7 @@ namespace GNB.Business
             // specifying the Swagger JSON endpoint.
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("../swagger/v1/swagger.json", "API Administration - CISecure");
+                c.SwaggerEndpoint("../swagger/v1/swagger.json", "API Business - GNB");
             });
 
             app.UseMvc();

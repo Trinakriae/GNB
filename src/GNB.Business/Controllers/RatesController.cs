@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GNB.Business.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -13,10 +14,12 @@ namespace GNB.Business.Controllers
     public class RatesController : ControllerBase
     {
         private readonly ILogger<RatesController> _logger;
+        private readonly IRatesService _ratesService;
 
-        public RatesController(ILogger<RatesController> logger)
+        public RatesController(ILogger<RatesController> logger, IRatesService ratesService)
         {
             _logger = logger;
+            _ratesService = ratesService;
         }
 
         // GET: api/rates

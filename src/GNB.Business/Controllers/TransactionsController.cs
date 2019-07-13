@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GNB.Business.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -13,10 +14,14 @@ namespace GNB.Business.Controllers
     public class TransactionsController : ControllerBase
     {
         private readonly ILogger<TransactionsController> _logger;
+        private readonly ITransactionsService _transactionsService;
+        private readonly IRatesService _ratesService;
 
-        public TransactionsController(ILogger<TransactionsController> logger)
+        public TransactionsController(ILogger<TransactionsController> logger, ITransactionsService transactionsService, IRatesService ratesService)
         {
             _logger = logger;
+            _transactionsService = transactionsService;
+            _ratesService = ratesService;
         }
 
         // GET: api/transactions
