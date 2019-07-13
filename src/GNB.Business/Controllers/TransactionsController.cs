@@ -26,14 +26,22 @@ namespace GNB.Business.Controllers
 
         // GET: api/transactions
         [HttpGet()]
-        public async Task GetTransactions()
+        public async Task<IActionResult> GetTransactions()
         {
-            throw new NotImplementedException();
+            try
+            {
+                throw new NotImplementedException();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Richiesta errata");
+                return BadRequest("Richiesta errata " + ex.Message);
+            }
         }
 
         // GET: api/transactions/T2006
         [HttpGet("{SKU}")]
-        public async Task GetTransactionBySKU(string SKU)
+        public async Task<IActionResult> GetTransactionBySKU(string SKU)
         {
             throw new NotImplementedException();
         }

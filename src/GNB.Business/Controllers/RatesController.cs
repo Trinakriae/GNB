@@ -24,7 +24,7 @@ namespace GNB.Business.Controllers
 
         // GET: api/rates
         [HttpGet()]
-        public async Task GetRates()
+        public async Task<IActionResult> GetRates()
         {
             _logger.LogInformation("Rates");
             throw new NotImplementedException();
