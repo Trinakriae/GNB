@@ -1,11 +1,11 @@
 ﻿using GNB.Business.Models;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace GNB.Business.Interfaces
 {
     public interface IRatesService
     {
-        IEnumerable<ConversionRate> GetConversionRates();
-        float GetConversionRateValue(string from, string to);
+        Task<IEnumerable<ConversionRate>> GetConversionRates();
     }
 }

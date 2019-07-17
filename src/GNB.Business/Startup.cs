@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Swashbuckle.AspNetCore.Swagger;
+using System;
 
 namespace GNB.Business
 {
@@ -20,11 +21,6 @@ namespace GNB.Business
             var builder = new ConfigurationBuilder().SetBasePath(env.ContentRootPath)
                                                     .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                                                     .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
-
-                                                    // custom config file
-                                                    .AddJsonFile("endpoint_settings.json", optional: false, reloadOnChange: false)
-                                                    .AddJsonFile($"endpoint_settings.{env.EnvironmentName}.json", optional: true)
-
                                                     .AddEnvironmentVariables();
             Configuration = builder.Build();
         }
@@ -50,13 +46,23 @@ namespace GNB.Business
                 option.Filters.Add(new CorsAuthorizationFilterFactory("MyPolicy"));
             });
 
+            //HTTP Client
+            var section = Configuration.GetSection("Endpoints:QuietStone");
+            services.AddHttpClient("QuietStone", c =>
+            {
+                c.BaseAddress = new Uri(section.Value);
+                c.Timeout = TimeSpan.FromMinutes(30);
+            });
+
             services.AddSingleton<IConfiguration>(Configuration);
             services.AddMemoryCache();
 
             //Dependecy Injection
             services.AddScoped<IRatesService, RatesJSONService>();
             services.AddScoped<ITransactionsService, TransactionsJSONService>();
-            
+            services.AddScoped<ICalculatorService, CalculatorService>();
+
+
 
             // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen(c =>

@@ -1,9 +1,9 @@
 ﻿namespace GNB.Business.Models
 {
-    public class Transaction
+    public class BusinessTransaction
     {
         public string SKU { get; set; }
         public string Currency { get; set; }
-        public float Amount { get; set; }
+        public decimal Amount { get; set; }
     }
 }

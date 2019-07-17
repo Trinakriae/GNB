@@ -1,10 +1,13 @@
-﻿using System.Collections.Generic;
-using System.Transactions;
+﻿using GNB.Business.Enums;
+using GNB.Business.Models;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace GNB.Business.Interfaces
 {
     public interface ITransactionsService
     {
-        IEnumerable<Transaction> GetTransactions();
+        Task<IEnumerable<BusinessTransaction>> GetTransactions();
+        Task<IEnumerable<BusinessTransaction>> GetTransactionsBySKU(string SKU);
     }
 }

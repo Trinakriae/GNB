@@ -1,4 +1,0 @@
-{
-  "RATES_JSON_ENDPOINT": "http://quiet-stone-2094.herokuapp.com/rates.json",
-  "TRANSACTIONS_JSON_ENDPOINT": "http://quiet-stone-2094.herokuapp.com/transactions.json"
-}
