@@ -19,13 +19,15 @@ namespace GNB.Business.Controllers
         private readonly ITransactionsService _transactionsService;
         private readonly ICalculatorService _calculatorService;
         private readonly IRatesService _ratesService;
+        private readonly IPersistenceService _persistenceService;
 
-        public ProductsController(ILogger<ProductsController> logger, ITransactionsService transactionsService, IRatesService ratesService, ICalculatorService calculatorService)
+        public ProductsController(ILogger<ProductsController> logger, ITransactionsService transactionsService, IRatesService ratesService, ICalculatorService calculatorService, IPersistenceService persistenceService)
         {
             _logger = logger;
             _transactionsService = transactionsService;
             _calculatorService = calculatorService;
             _ratesService = ratesService;
+            _persistenceService = persistenceService;
         }
 
         // GET: api/products/transactions
@@ -35,6 +37,7 @@ namespace GNB.Business.Controllers
             try
             {
                 IEnumerable<BusinessTransaction> transactions = await _transactionsService.GetTransactions();
+                _persistenceService.SaveTransactions(transactions);
                 return Ok(transactions);
             }
             catch (Exception ex)
@@ -51,6 +54,7 @@ namespace GNB.Business.Controllers
             try
             {
                 IEnumerable<ConversionRate> rates = await _ratesService.GetConversionRates();
+                _persistenceService.SaveRates(rates);
                 return Ok(rates);
             }
             catch (Exception ex)

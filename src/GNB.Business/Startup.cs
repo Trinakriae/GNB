@@ -57,11 +57,11 @@ namespace GNB.Business
             services.AddSingleton<IConfiguration>(Configuration);
             services.AddMemoryCache();
 
-            //Dependecy Injection
+            //Dependency Injection
             services.AddScoped<IRatesService, RatesJSONService>();
             services.AddScoped<ITransactionsService, TransactionsJSONService>();
             services.AddScoped<ICalculatorService, CalculatorService>();
-
+            services.AddScoped<IPersistenceService, FileService>();
 
 
             // Register the Swagger generator, defining 1 or more Swagger documents

@@ -11,9 +11,14 @@ namespace GNB.Business.Services
     {
         public decimal ComputeTotalTransactionValueByCurrency(IEnumerable<Amount> amounts, IEnumerable<ConversionRate> rates, CurrencyCode currencyCode)
         {
-            var a = GetConversionRateValue(rates, CurrencyCode.CAD.Value, CurrencyCode.EUR.Value);
+            decimal total = 0;
 
-            return 0;
+            foreach(var amount in amounts)
+            {
+                total = total + amount.Value * GetConversionRateValue(rates, amount.Currency, currencyCode.Value);
+            }
+
+            return total;
         }
 
         private decimal GetConversionRateValue(IEnumerable<ConversionRate> rates, string from, string to)
