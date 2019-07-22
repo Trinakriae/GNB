@@ -11,6 +11,7 @@ using Microsoft.Extensions.Logging;
 
 namespace GNB.Business.Controllers
 {
+    //FINISHED
     [Route("api/[controller]")]
     [ApiController]
     public class ProductsController : ControllerBase
