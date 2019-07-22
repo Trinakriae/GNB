@@ -8,7 +8,7 @@ namespace GNB.Business.Interfaces
 {
     public interface IPersistenceService
     {
-        Task SaveTransactions(IEnumerable<BusinessTransaction> transactions);
-        Task SaveRates(IEnumerable<ConversionRate> rates);
+        void SaveTransactions(IEnumerable<BusinessTransaction> transactions);
+        void SaveRates(IEnumerable<ConversionRate> rates);
     }
 }

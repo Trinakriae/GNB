@@ -4,6 +4,7 @@ using GNB.Business.Models;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -26,7 +27,7 @@ namespace GNB.Business.Services
             {
                 HttpResponseMessage response = await _client.GetAsync("transactions.json");
                 string contentString = await response.Content.ReadAsStringAsync();
-
+                
                 if (response.StatusCode == HttpStatusCode.OK)
                 {
                     IEnumerable<BusinessTransaction> transactions = JsonConvert.DeserializeObject<IEnumerable<BusinessTransaction>>(contentString);

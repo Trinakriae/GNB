@@ -42,8 +42,8 @@ namespace GNB.Business.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Richiesta errata");
-                return Ok();
+                _logger.LogError(ex, "Peticion erronea");
+                return StatusCode(StatusCodes.Status500InternalServerError);
             }
         }
 
@@ -71,7 +71,7 @@ namespace GNB.Business.Controllers
             try
             {
                 IEnumerable<BusinessTransaction> transactions = await _transactionsService.GetTransactionsBySKU(SKU);
-                if(transactions.Count() == 0)
+                if(transactions == null || transactions.Count() == 0)
                 {
                     return NotFound();
                 }

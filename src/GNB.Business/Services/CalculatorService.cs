@@ -11,14 +11,25 @@ namespace GNB.Business.Services
     {
         public decimal ComputeTotalTransactionValueByCurrency(IEnumerable<Amount> amounts, IEnumerable<ConversionRate> rates, CurrencyCode currencyCode)
         {
-            decimal total = 0;
-
-            foreach(var amount in amounts)
+            try
             {
-                total = total + amount.Value * GetConversionRateValue(rates, amount.Currency, currencyCode.Value);
-            }
+                decimal total = 0;
 
-            return total;
+                foreach (var amount in amounts)
+                {
+                    decimal convertedAmount = amount.Value * GetConversionRateValue(rates, amount.Currency, currencyCode.Value);
+                    if(convertedAmount < 0)
+                    {
+                        throw new Exception($"No hay tasa de conversión desde {amount.Currency} hasta {currencyCode.Value}");
+                    }
+                    total += convertedAmount;
+                }
+                return total;
+            }
+            catch(Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
         private decimal GetConversionRateValue(IEnumerable<ConversionRate> rates, string from, string to)
@@ -27,7 +38,11 @@ namespace GNB.Business.Services
             {
                 if(rates == null || rates.Count() == 0)
                 {
-                    return 0;
+                    return -1;
+                }
+                if(from == to)
+                {
+                    return 1;
                 }
 
                 ConversionRate exactConversion = rates.Where(r => r.From == from && r.To == to).FirstOrDefault();
@@ -37,18 +52,18 @@ namespace GNB.Business.Services
                     return exactConversion.Rate;
                 }
 
-                var list = rates.Where(r => r.To == from);
-                var newList = rates.Where(r => r.From != from && r.To != to);
+                IEnumerable<ConversionRate> nextRates = rates.Where(r => r.From == from);
+                IEnumerable<ConversionRate> filteredRates = rates.Where(r => r.To != from);
 
-                foreach(var item in list)
+                foreach(ConversionRate nextRate in nextRates)
                 {
-                    var value = GetConversionRateValue(newList, item.From, item.To);
+                    var value = GetConversionRateValue(filteredRates, nextRate.To, to);
                     if(value > 0)
                     {
-                        return item.Rate * value;
+                        return nextRate.Rate * value;
                     }
                 }
-                return 0;
+                return -1;
 
             }
             catch (Exception ex)
