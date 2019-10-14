@@ -23,3 +23,17 @@ C:\CICCIO\Workspace\GNB\src\GNB.Business\obj\Debug\netcoreapp2.1\GNB.Business.Ra
 C:\CICCIO\Workspace\GNB\src\GNB.Business\bin\Debug\netcoreapp2.1\GNB.Business.pdb
 C:\CICCIO\Workspace\GNB\src\GNB.Business\obj\Debug\netcoreapp2.1\GNB.Business.dll
 C:\CICCIO\Workspace\GNB\src\GNB.Business\obj\Debug\netcoreapp2.1\GNB.Business.pdb
+C:\Users\Francesco.Sciuto\Workspace\GNB\src\GNB.Business\bin\Debug\netcoreapp2.1\GNB.Business.deps.json
+C:\Users\Francesco.Sciuto\Workspace\GNB\src\GNB.Business\bin\Debug\netcoreapp2.1\GNB.Business.runtimeconfig.json
+C:\Users\Francesco.Sciuto\Workspace\GNB\src\GNB.Business\bin\Debug\netcoreapp2.1\GNB.Business.runtimeconfig.dev.json
+C:\Users\Francesco.Sciuto\Workspace\GNB\src\GNB.Business\bin\Debug\netcoreapp2.1\GNB.Business.dll
+C:\Users\Francesco.Sciuto\Workspace\GNB\src\GNB.Business\bin\Debug\netcoreapp2.1\GNB.Business.pdb
+C:\Users\Francesco.Sciuto\Workspace\GNB\src\GNB.Business\obj\Debug\netcoreapp2.1\GNB.Business.csprojAssemblyReference.cache
+C:\Users\Francesco.Sciuto\Workspace\GNB\src\GNB.Business\obj\Debug\netcoreapp2.1\GNB.Business.csproj.CoreCompileInputs.cache
+C:\Users\Francesco.Sciuto\Workspace\GNB\src\GNB.Business\obj\Debug\netcoreapp2.1\GNB.Business.RazorAssemblyInfo.cache
+C:\Users\Francesco.Sciuto\Workspace\GNB\src\GNB.Business\obj\Debug\netcoreapp2.1\GNB.Business.RazorAssemblyInfo.cs
+C:\Users\Francesco.Sciuto\Workspace\GNB\src\GNB.Business\obj\Debug\netcoreapp2.1\GNB.Business.AssemblyInfoInputs.cache
+C:\Users\Francesco.Sciuto\Workspace\GNB\src\GNB.Business\obj\Debug\netcoreapp2.1\GNB.Business.AssemblyInfo.cs
+C:\Users\Francesco.Sciuto\Workspace\GNB\src\GNB.Business\obj\Debug\netcoreapp2.1\GNB.Business.RazorTargetAssemblyInfo.cache
+C:\Users\Francesco.Sciuto\Workspace\GNB\src\GNB.Business\obj\Debug\netcoreapp2.1\GNB.Business.dll
+C:\Users\Francesco.Sciuto\Workspace\GNB\src\GNB.Business\obj\Debug\netcoreapp2.1\GNB.Business.pdb

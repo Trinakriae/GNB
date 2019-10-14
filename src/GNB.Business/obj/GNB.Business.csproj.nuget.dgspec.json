@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\CICCIO\\Workspace\\GNB\\src\\GNB.Business\\GNB.Business.csproj": {}
+    "C:\\Users\\Francesco.Sciuto\\Workspace\\GNB\\src\\GNB.Business\\GNB.Business.csproj": {}
   },
   "projects": {
-    "C:\\CICCIO\\Workspace\\GNB\\src\\GNB.Business\\GNB.Business.csproj": {
+    "C:\\Users\\Francesco.Sciuto\\Workspace\\GNB\\src\\GNB.Business\\GNB.Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\CICCIO\\Workspace\\GNB\\src\\GNB.Business\\GNB.Business.csproj",
+        "projectUniqueName": "C:\\Users\\Francesco.Sciuto\\Workspace\\GNB\\src\\GNB.Business\\GNB.Business.csproj",
         "projectName": "GNB.Business",
-        "projectPath": "C:\\CICCIO\\Workspace\\GNB\\src\\GNB.Business\\GNB.Business.csproj",
-        "packagesPath": "C:\\Users\\Agenzia Sciuto\\.nuget\\packages\\",
-        "outputPath": "C:\\CICCIO\\Workspace\\GNB\\src\\GNB.Business\\obj\\",
+        "projectPath": "C:\\Users\\Francesco.Sciuto\\Workspace\\GNB\\src\\GNB.Business\\GNB.Business.csproj",
+        "packagesPath": "C:\\Users\\Francesco.Sciuto\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Francesco.Sciuto\\Workspace\\GNB\\src\\GNB.Business\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Agenzia Sciuto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Francesco.Sciuto\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

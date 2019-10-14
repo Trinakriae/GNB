@@ -15328,23 +15328,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Agenzia Sciuto\\.nuget\\packages\\": {},
+    "C:\\Users\\Francesco.Sciuto\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\CICCIO\\Workspace\\GNB\\src\\GNB.Business.Test\\GNB.Business.Test.csproj",
+      "projectUniqueName": "C:\\Users\\Francesco.Sciuto\\Workspace\\GNB\\src\\GNB.Business.Test\\GNB.Business.Test.csproj",
       "projectName": "GNB.Business.Test",
-      "projectPath": "C:\\CICCIO\\Workspace\\GNB\\src\\GNB.Business.Test\\GNB.Business.Test.csproj",
-      "packagesPath": "C:\\Users\\Agenzia Sciuto\\.nuget\\packages\\",
-      "outputPath": "C:\\CICCIO\\Workspace\\GNB\\src\\GNB.Business.Test\\obj\\",
+      "projectPath": "C:\\Users\\Francesco.Sciuto\\Workspace\\GNB\\src\\GNB.Business.Test\\GNB.Business.Test.csproj",
+      "packagesPath": "C:\\Users\\Francesco.Sciuto\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Francesco.Sciuto\\Workspace\\GNB\\src\\GNB.Business.Test\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Agenzia Sciuto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Francesco.Sciuto\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -15357,8 +15357,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\CICCIO\\Workspace\\GNB\\src\\GNB.Business\\GNB.Business.csproj": {
-              "projectPath": "C:\\CICCIO\\Workspace\\GNB\\src\\GNB.Business\\GNB.Business.csproj"
+            "C:\\Users\\Francesco.Sciuto\\Workspace\\GNB\\src\\GNB.Business\\GNB.Business.csproj": {
+              "projectPath": "C:\\Users\\Francesco.Sciuto\\Workspace\\GNB\\src\\GNB.Business\\GNB.Business.csproj"
             }
           }
         }
